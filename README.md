@@ -24,13 +24,19 @@
 **Versiyon:** v1.0.0
 
 **TR:** Digispark ATtiny85 tabanlı BadUSB payloadu — hedef bilgisayara takılınca sistem bilgisini Telegram'a iletir.
+
 **EN:** Digispark ATtiny85 BadUSB payload that silently collects and sends system info to Telegram.
 
 ---
 
-## Ne Yapar?
+## 🎯 Ne Yapar ve Özellikleri Nelerdir?
 
-Digispark, USB'ye takıldığında klavye olarak tanınır ve otomatik olarak gizli bir PowerShell penceresi açar. Uzak bir script çalıştırarak bilgisayar adı, kullanıcı adı, işletim sistemi ve dış IP adresini toplar; bunları Telegram bot üzerinden belirtilen sohbete gönderir. İşlem tamamlandığında PowerShell penceresi kapanır.
+Digispark, USB'ye takıldığında kendisini bir klavye olarak tanıtır ve otomatik olarak gizli bir PowerShell penceresi açar. Uzak bir script çalıştırarak bilgisayar adı, kullanıcı adı, işletim sistemi ve dış IP adresini toplar; bunları Telegram bot üzerinden belirtilen sohbete gönderir. İşlem tamamlandığında PowerShell penceresi iz bırakmadan kapanır.
+
+* **Stealth (Gizli) Mod:** PowerShell'i `-w hidden` parametresi ile açarak kurbanın ekranında minimum iz bırakır.
+* **Execution Policy Bypass:** Güvenlik politikalarını geçici olarak (`-ep bypass`) aşar.
+* **Otomatik Temizlik:** Script kendini ve PowerShell geçmişini temizler.
+* **Türkçe Klavye Desteği:** `kbd_tr_tr` modülü ile TR Q klavyelerde sorunsuz çalışır.
 
 ## Nasıl Çalışır?
 
