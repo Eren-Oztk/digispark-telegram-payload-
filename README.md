@@ -29,6 +29,8 @@
 
 ## 🎯 Ne Yapar ve Özellikleri Nelerdir?
 
+**DigiDrop-PS**, siber güvenlik uzmanlarının (Red Team) fiziksel erişim senaryolarında HID (Human Interface Device) saldırılarını simüle etmeleri için tasarlanmış bir BadUSB payload aracıdır. Digispark (ATTINY85) kullanarak kendini bir klavye gibi tanıtır, Windows sistemlerde saniyeler içinde gizli bir PowerShell oturumu açar ve uzak bir sunucudan (örn. GitHub Gist) hedeflenen scripti indirip çalıştırır.
+
 Digispark, USB'ye takıldığında kendisini bir klavye olarak tanıtır ve otomatik olarak gizli bir PowerShell penceresi açar. Uzak bir script çalıştırarak bilgisayar adı, kullanıcı adı, işletim sistemi ve dış IP adresini toplar; bunları Telegram bot üzerinden belirtilen sohbete gönderir. İşlem tamamlandığında PowerShell penceresi iz bırakmadan kapanır.
 
 * **Stealth (Gizli) Mod:** PowerShell'i `-w hidden` parametresi ile açarak kurbanın ekranında minimum iz bırakır.
@@ -109,4 +111,5 @@ Arduino IDE'de `Tools → Board → Digispark (Default - 16.5MHz)` seç, yükle.
 
 ## Lisans
 
+Bu proje MIT Lisansı altında açık kaynak olarak paylaşılmıştır. Etik sınırlar çerçevesinde dilediğiniz gibi geliştirebilir, çatallayabilir (fork) ve katkıda bulunabilirsiniz.
 [MIT](LICENSE) © 2025 Eren Öztürk
