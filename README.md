@@ -15,9 +15,7 @@
 
 ---
 
-> ⚠ **Uyarı:** Bu araç yalnızca eğitim ve araştırma amaçlıdır.
-> Yalnızca kendi cihazlarınızda ve ağlarınızda test edin.
-> İzinsiz kullanım yasalara aykırıdır.
+> ⚠️ **YASAL UYARI:** Bu proje tamamen siber güvenlik araştırmaları (Red Teaming) ve eğitim amaçlı geliştirilmiştir. Kötüye kullanımından doğacak hiçbir yasal sorumluluk geliştiriciye ait değildir. Yalnızca izinli sistemlerde ve kendi ağlarınızda test ediniz. İzinsiz kullanım yasalara aykırıdır.
 
 ---
 
