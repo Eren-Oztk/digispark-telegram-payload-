@@ -1,0 +1,28 @@
+# Secrets
+.env
+.env.local
+secrets.h
+credentials.h
+config.local.*
+*.key
+*.pem
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Arduino / Digispark build
+build/
+.pio/
+*.ino.elf
+*.ino.hex
+.pioenvs/
