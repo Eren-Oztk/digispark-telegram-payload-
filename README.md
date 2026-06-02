@@ -112,4 +112,4 @@ Arduino IDE'de `Tools → Board → Digispark (Default - 16.5MHz)` seç, yükle.
 ## Lisans
 
 Bu proje MIT Lisansı altında açık kaynak olarak paylaşılmıştır. Etik sınırlar çerçevesinde dilediğiniz gibi geliştirebilir, çatallayabilir (fork) ve katkıda bulunabilirsiniz.
-[MIT](LICENSE) © 2025 Eren Öztürk
+[MIT](LICENSE) © 2025 Eren Özatak
